@@ -17,7 +17,7 @@ class CreateAuthenticatesTable extends Migration
             $table->unsignedInteger('id')->autoIncrement();
             $table->string('role_name');
             $table->string('label');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
 

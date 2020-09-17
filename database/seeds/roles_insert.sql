@@ -1,0 +1,1 @@
+INSERT INTO `e_roles` (`id`, `role_name`, `label`, `description`, `created_at`, `updated_at`) VALUES (NULL, 'authenticated', 'Người dùng đăng nhập', 'Người dùng đã đăng nhập', NULL, NULL), (NULL, 'admin', 'Quản trị chung', 'Quản trị chung', NULL, NULL);
