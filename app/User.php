@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+// use App\Permissions\HasPermissionTrait;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    // use HasPermissionTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -40,5 +42,10 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class)->withTimestamps();
     }
 }
